@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "GetUser";
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@{int i = 0;}
+@foreach (var item in @ViewBag.MyList)
+{
+    <h3>Element value at position @i = @item </h3>
+    i++;
+}
+
+

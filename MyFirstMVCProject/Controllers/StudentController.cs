@@ -21,7 +21,8 @@ namespace MyFirstMVCProject.Controllers
         // GET: Student/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            //Display student info depends on id given
+            return View(MvcApplication.studentsList.FirstOrDefault(s => s.StudentId == id));
         }
 
         // GET: Student/Create
@@ -50,17 +51,25 @@ namespace MyFirstMVCProject.Controllers
         // GET: Student/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            //Display student info depends on id given
+            return View(MvcApplication.studentsList.FirstOrDefault(s => s.StudentId == id));
         }
 
         // POST: Student/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, MyFirstMVCProject.Models.Student student)
         {
             try
             {
                 // TODO: Add update logic here
+                //Get student info depends on id given
+                Models.Student std = MvcApplication.studentsList.FirstOrDefault(s => s.StudentId == id);
 
+                //Apply changes
+                std.StudentName = student.StudentName;
+                std.Age = student.Age;
+
+                //Redirect to index page which shows listing
                 return RedirectToAction("Index");
             }
             catch
@@ -72,17 +81,24 @@ namespace MyFirstMVCProject.Controllers
         // GET: Student/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            //Display student info depends on id given
+            return View(MvcApplication.studentsList.FirstOrDefault(s => s.StudentId == id));
         }
 
         // POST: Student/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, MyFirstMVCProject.Models.Student student)
         {
             try
             {
                 // TODO: Add delete logic here
+                //Get student info depends on id given(user choose by clicking)
+                Models.Student std = MvcApplication.studentsList.FirstOrDefault(s => s.StudentId == id);
 
+                //Remove that student from list
+                MvcApplication.studentsList.Remove(std);
+
+                //Redirect to index page which shows listing
                 return RedirectToAction("Index");
             }
             catch

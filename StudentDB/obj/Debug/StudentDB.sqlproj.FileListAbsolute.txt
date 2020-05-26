@@ -1,0 +1,6 @@
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\bin\Debug\StudentDB.dacpac
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\bin\Debug\StudentDB.dll
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\bin\Debug\StudentDB.pdb
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\obj\Debug\StudentDB.sqlprojAssemblyReference.cache
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\obj\Debug\StudentDB.dll
+C:\Users\satish\source\repos\ASP_DOT_NET_MVC_SAMPLE\StudentDB\obj\Debug\StudentDB.pdb
